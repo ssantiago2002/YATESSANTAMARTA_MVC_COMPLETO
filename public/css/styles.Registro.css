@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: #fff;
+    padding: 10px 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+   
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  
+}
+
+small{
+   display: none; 
+
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(130deg, #eee, #eee,);
+
+}
+.contenedor{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  background-color: #fff;
+  border-radius: 5px; 
+}
+.contenedor .title{
+  font-size: 25px;
+  font-weight: 500;
+}
+.contenedor form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 12px 0;
+
+}
+form .form-group{
+    margin-bottom: 15px;
+    width: calc(100%/2 -20px);
+}
+/*Para todos los nombres*/
+
+form span{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #3a76a0;
+    padding-left: 15px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus
+.form-group input:valid{
+    border-color: rgb(11, 118, 160);
+}
+
+form .button{
+    width: 100%;
+    height: 40px;
+    margin: 40px 0;
+
+}
+form .button input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(130deg, #0055aa,rgb(9, 151, 207));
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+/*animacion de colores*/
+
+form .button input:hover{
+   background: linear-gradient(130deg, rgb(9, 151, 207),#0055aa); 
+   
+}
+.was-validated small{
+  display: block;
+  color: red;  
+}
+
+/*funcion para usarse en un celular*/
+
+@media(max-width:584px){
+    .contenedor{
+        max-width: 100%;
+    }
+
+    form .form-group{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    /* aparece la barra de el scroll*/
+
+    .contenedor form{
+        max-width: 400px;
+        overflow-y: scroll;
+    }
+    .contenedor form::-webkit-scrollbar{
+        width: 0;
+    }
+    form .button{
+        margin: 20px 0;
+
+    }
+}
